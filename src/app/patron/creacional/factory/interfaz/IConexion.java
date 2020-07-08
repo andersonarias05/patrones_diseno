@@ -1,4 +1,4 @@
-package app.patron.creacional.factory;
+package app.patron.creacional.factory.interfaz;
 
 public interface IConexion {
 	

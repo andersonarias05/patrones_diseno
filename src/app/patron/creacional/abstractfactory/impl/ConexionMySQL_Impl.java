@@ -1,7 +1,9 @@
-package app.patron.creacional.factory;
+package app.patron.creacional.abstractfactory.impl;
 
-public class ConexionMySQL_Impl implements IConexion {
-	
+import app.patron.creacional.abstractfactory.interfaz.IConexionBD;
+
+public class ConexionMySQL_Impl implements IConexionBD {
+
 	private String host;
 	private String puerto;
 	private String usuario;
@@ -12,7 +14,7 @@ public class ConexionMySQL_Impl implements IConexion {
 		this.puerto = "3306";
 		this.usuario = "root";
 		this.contrasena = "123";
-	}	//fin constructor
+	}
 
 	@Override
 	public void conectar() {
@@ -27,8 +29,7 @@ public class ConexionMySQL_Impl implements IConexion {
 
 	@Override
 	public String toString() {
-		return "ConexionMySQL_Impl [host=" + host + ", puerto=" + puerto + ", usuario=" + usuario + ", contrasena="
+		return "ConexionMySQL [host=" + host + ", puerto=" + puerto + ", usuario=" + usuario + ", contrasena="
 				+ contrasena + "]";
 	}
-	
 }
