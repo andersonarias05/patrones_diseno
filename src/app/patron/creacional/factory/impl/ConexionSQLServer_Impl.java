@@ -1,4 +1,6 @@
-package app.patron.creacional.factory;
+package app.patron.creacional.factory.impl;
+
+import app.patron.creacional.factory.interfaz.IConexion;
 
 public class ConexionSQLServer_Impl implements IConexion {
 

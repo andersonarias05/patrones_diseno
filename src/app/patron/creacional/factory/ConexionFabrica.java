@@ -1,5 +1,12 @@
 package app.patron.creacional.factory;
 
+import app.patron.creacional.factory.impl.ConexionMySQL_Impl;
+import app.patron.creacional.factory.impl.ConexionOracle_Impl;
+import app.patron.creacional.factory.impl.ConexionPostgreSQL_Impl;
+import app.patron.creacional.factory.impl.ConexionSQLServer_Impl;
+import app.patron.creacional.factory.impl.ConexionVacia;
+import app.patron.creacional.factory.interfaz.IConexion;
+
 public class ConexionFabrica {
 
 	public IConexion getConexion(String motor) {

@@ -1,6 +1,8 @@
-package app.patron.creacional.factory;
+package app.patron.creacional.abstractfactory.impl;
 
-public class ConexionPostgreSQL_Impl implements IConexion {
+import app.patron.creacional.abstractfactory.interfaz.IConexionBD;
+
+public class ConexionPostgreSQL_Impl implements IConexionBD {
 
 	private String host;
 	private String puerto;
@@ -12,7 +14,7 @@ public class ConexionPostgreSQL_Impl implements IConexion {
 		this.puerto = "5433";
 		this.usuario = "postgres";
 		this.contrasena = "123";
-	}	//fin constructor
+	}
 
 	@Override
 	public void conectar() {
@@ -27,8 +29,7 @@ public class ConexionPostgreSQL_Impl implements IConexion {
 
 	@Override
 	public String toString() {
-		return "ConexionPostgreSQL_Impl [host=" + host + ", puerto=" + puerto + ", usuario=" + usuario + ", contrasena="
+		return "ConexionPostgreSQL [host=" + host + ", puerto=" + puerto + ", usuario=" + usuario + ", contrasena="
 				+ contrasena + "]";
 	}
-
 }
